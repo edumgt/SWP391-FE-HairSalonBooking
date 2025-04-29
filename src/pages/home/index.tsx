@@ -65,15 +65,11 @@ const Home: React.FC = () => {
           />
         </div>
         <div className="intro-text">
-          <h2>Về Kim Hair Salon, Sứ Mệnh, Tầm Nhìn</h2>
+          <h2>김 헤어살롱에 대하여, 사명과 비전</h2>
           <p>
-            Kim Hair Salon tự hào là chuỗi salon chuyên gia, có uy tín trong
-            ngành làm đẹp tại Việt Nam. Tóc đẹp mỗi ngày là lời cam kết của Kim
-            Hair Salon với khách hàng và vẻ đẹp nghệ thuật không chỉ nằm ở sự
-            hào nhoáng của vẻ ngoài, mà còn nằm ở tiêu chuẩn “vàng” của mỗi nhà
-            sáng tạo. Một mái tóc đẹp, ngoài màu sắc xu hướng, kiểu dáng hợp
-            thời trang mà còn phải toát lên nét đẹp từ sự khỏe mạnh của mái tóc
-            từ bên trong.
+          김 헤어살롱은 베트남에서 뷰티 산업 내에서 신뢰받는 전문 체인 살롱으로 자부심을 가지고 있습니다.
+‘매일 아름다운 머리’는 김 헤어살롱이 고객에게 약속하는 말이며, 아름다움은 단순히 외적인 화려함에 그치지 않고, 각 스타일리스트의 ‘황금 기준’에서 비롯된 예술적인 가치에 있습니다.
+아름다운 머릿결은 단지 트렌디한 색상이나 스타일뿐만 아니라, 건강함에서 비롯된 내면의 아름다움까지 반영되어야 합니다.
           </p>
         </div>
       </div>

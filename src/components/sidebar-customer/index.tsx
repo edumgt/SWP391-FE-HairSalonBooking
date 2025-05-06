@@ -59,12 +59,12 @@ const SidebarCustomer: React.FC = () => {
   };
 
   const handleLogout = () => {
-    // Xóa thông tin người dùng khỏi localStorage và chuyển hướng đến trang đăng nhập
+    // Xóa thông tin người dùng khỏi localStorage và chuyển hướng đến trang 로그인
     localStorage.removeItem("fullName");
     localStorage.removeItem("token"); // Xóa token khi đăng xuất
     setSelectedOption(null); // Reset lại trạng thái selectedOption
     message.success("Đăng xuất thành công!");
-    navigate("/login"); // Điều hướng về trang đăng nhập
+    navigate("/login"); // Điều hướng về trang 로그인
   };
 
   return (

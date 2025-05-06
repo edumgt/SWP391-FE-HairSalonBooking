@@ -24,7 +24,7 @@ function StylistDayoff() {
         const response = await api.get("/schedules");
         const allSchedules = response.data;
 
-        // Lọc các schedule có stylistId khớp với stylist đang đăng nhập
+        // Lọc các schedule có stylistId khớp với stylist đang 로그인
         const stylistSchedules = allSchedules
           .filter(
             (schedule: Schedule) => schedule.stylist.id === parseInt(stylistId)

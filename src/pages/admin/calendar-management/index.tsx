@@ -427,8 +427,8 @@ const CalendarManagement: React.FC = () => {
                     : "Không tìm thấy dịch vụ"}
                 </p>
                 <p>
-                  <strong>Tổng giá dịch vụ:</strong>{" "}
-                  {selectedEvent.totalPrice || "Không có thông tin giá dịch vụ"}
+                  <strong>Tổng 요금안내:</strong>{" "}
+                  {selectedEvent.totalPrice || "Không có thông tin 요금안내"}
                 </p>
                 <p>
                   <strong>Trạng thái:</strong> {selectedEvent.status}

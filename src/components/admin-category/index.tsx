@@ -39,7 +39,7 @@ const AdminCategory: React.FC = () => {
 
     setUser(null); // Reset lại trạng thái người dùng
     message.success("Đăng xuất thành công!"); // Thêm thông báo đăng xuất thành công
-    navigate("/"); // Điều hướng về trang đăng nhập
+    navigate("/"); // Điều hướng về trang 로그인
   };
 
   function getItem(
@@ -68,7 +68,7 @@ const AdminCategory: React.FC = () => {
       "Quản Lý Nhân Viên",
       "adminEmployeeRegistration",
       <IdcardOutlined />
-    ), // Đường dẫn cho Đăng ký nhân viên
+    ), // Đường dẫn cho 등록 nhân viên
     getItem("Dashboard", "adminDashboard", <DashboardOutlined />), // Đường dẫn cho Dashboard
     getItem("Quản Lý Lịch", "adminCalendarManagement", <CalendarOutlined />), // Đường dẫn cho Xếp lịch Stylist
     getItem("Xem FeedBack ", "feedbackManagement", <ScheduleOutlined />),

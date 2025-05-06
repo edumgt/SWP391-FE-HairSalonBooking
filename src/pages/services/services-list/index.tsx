@@ -97,7 +97,7 @@ const Services = () => {
               id={service.id}
               imageSrc={service.serviceImage} // Hiển thị hình ảnh từ API
               title={service.name} // Hiển thị tên dịch vụ
-              price={`Giá từ ${service.price.toLocaleString("vi-VN")} VND`} // Hiển thị giá dịch vụ với dấu chấm ngăn cách
+              price={`Giá từ ${service.price.toLocaleString("vi-VN")} VND`} // Hiển thị 요금안내 với dấu chấm ngăn cách
               onClick={handleServiceClick} // Truyền hàm xử lý khi nhấp vào
             />
           ))

@@ -25,7 +25,7 @@ function Header() {
   }, [location]);
 
   useEffect(() => {
-    // Kiểm tra localStorage xem người dùng đã đăng nhập hay chưa
+    // Kiểm tra localStorage xem người dùng đã 로그인 hay chưa
     const fullName = localStorage.getItem("fullName"); // Lấy fullName từ localStorage
     const savedToken = localStorage.getItem("token"); // Lấy token từ localStorage
 
@@ -58,18 +58,18 @@ function Header() {
   }, []);
 
   const handleLogoClick = () => {
-    navigate("/"); // Điều hướng về trang chủ khi nhấp vào logo
+    navigate("/"); // Điều hướng về 홈 khi nhấp vào logo
   };
 
   const handleLogout = () => {
-    // Xóa thông tin người dùng khỏi localStorage và chuyển hướng đến trang đăng nhập
+    // Xóa thông tin người dùng khỏi localStorage và chuyển hướng đến trang 로그인
     localStorage.removeItem("fullName");
     localStorage.removeItem("token"); // Xóa token khi đăng xuất
     localStorage.removeItem("accountId");
     setUserFullName(null); // Reset lại trạng thái userFullName
     setToken(null); // Reset lại trạng thái token
     message.success("Đăng xuất thành công!");
-    navigate("/login"); // Điều hướng về trang đăng nhập
+    navigate("/login"); // Điều hướng về trang 로그인
   };
 
   // Kiểm tra nếu đường dẫn hiện tại khớp với một trong các mục, thêm class 'active'
@@ -113,7 +113,7 @@ function Header() {
               onClick={() => navigate("/login")}
               style={{ cursor: "pointer" }}
             >
-              Đăng nhập/Đăng ký
+              로그인/등록
             </span>
           )}
         </div>
@@ -130,25 +130,25 @@ function Header() {
             />
           </div>
           <span className={isActive("/")} onClick={() => navigate("/")}>
-            Trang Chủ
+            홈
           </span>
           <span
             className={isActive("/about-us")}
             onClick={() => navigate("/about-us")}
           >
-            Về Chúng Tôi
+            회사소개
           </span>
           <span
             className={isActive("/services")}
             onClick={() => navigate("/services")}
           >
-            Giá Dịch Vụ
+            요금안내
           </span>
           <span
             className={isActive("/brand")}
             onClick={() => navigate("/brand")}
           >
-            Thương Hiệu
+            브랜드
           </span>
           <span
             className={isActive("/collection")}

@@ -15,7 +15,7 @@ const Register: React.FC = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false); // Trạng thái loading
 
-  // Hàm gửi yêu cầu đăng ký
+  // Hàm gửi yêu cầu 등록
   const registerUser = async (values: Store) => {
     setLoading(true); // Bắt đầu hiệu ứng loading
     try {
@@ -29,13 +29,13 @@ const Register: React.FC = () => {
       });
 
       if (registerResponse.status === 201 || registerResponse.status === 200) {
-        message.success("Đăng ký thành công!");
+        message.success("등록 thành công!");
         navigate("/login");
       } else {
-        message.error("Đăng ký thất bại, vui lòng thử lại!");
+        message.error("등록 thất bại, vui lòng thử lại!");
       }
     } catch (error) {
-      console.error("Đã xảy ra lỗi khi đăng ký:", error);
+      console.error("Đã xảy ra lỗi khi 등록:", error);
       message.error("Đã xảy ra lỗi, vui lòng thử lại sau!");
     } finally {
       setLoading(false); // Kết thúc hiệu ứng loading
@@ -70,7 +70,7 @@ const Register: React.FC = () => {
     
      
         <div>
-          <h1>Đăng ký</h1>
+          <h1>등록</h1>
 
           <Form
             form={form}
@@ -79,18 +79,18 @@ const Register: React.FC = () => {
             onFinishFailed={onFinishFailed}
           >
             <Form.Item
-              label="Số điện thoại"
+              label="연락처"
               name="phone"
               rules={[
                 {
                   required: true,
-                  message: "Vui lòng nhập số điện thoại của bạn!",
+                  message: "Vui lòng nhập 연락처 của bạn!",
                 },
                 {
                   pattern: /^[0-9]+$/,
-                  message: "Số điện thoại phải là chữ số!",
+                  message: "연락처 phải là chữ số!",
                 },
-                { len: 10, message: "Số điện thoại phải đúng 10 chữ số!" },
+                { len: 10, message: "연락처 phải đúng 10 chữ số!" },
               ]}
             >
               <Input />
@@ -195,7 +195,7 @@ const Register: React.FC = () => {
 
             <Form.Item className="login-link">
               <span onClick={() => navigate("/login")}>
-                Đã có tài khoản? Đăng nhập
+                Đã có tài khoản? 로그인
               </span>
             </Form.Item>
           </Form>

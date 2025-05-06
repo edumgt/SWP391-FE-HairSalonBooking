@@ -52,7 +52,7 @@ const ResetPassword: React.FC = () => {
       // Kiểm tra phản hồi từ API
       if (response.status === 200) {
         message.success("Đặt lại mật khẩu thành công!");
-        navigate("/login"); // Điều hướng về trang đăng nhập sau khi thành công
+        navigate("/login"); // Điều hướng về trang 로그인 sau khi thành công
       } else {
         message.error("Đặt lại mật khẩu không thành công, vui lòng thử lại.");
       }
@@ -67,12 +67,12 @@ const ResetPassword: React.FC = () => {
       <h1>Lấy Lại Mật Khẩu</h1>
       <Form form={form} labelCol={{ span: 24 }} onFinish={onFinish}>
         <Form.Item
-          label="Số điện thoại"
+          label="연락처"
           name="phone"
           rules={[
-            { required: true, message: "Vui lòng nhập số điện thoại của bạn!" },
-            { pattern: /^[0-9]+$/, message: "Số điện thoại phải là chữ số!" },
-            { len: 10, message: "Số điện thoại phải đúng 10 chữ số!" },
+            { required: true, message: "Vui lòng nhập 연락처 của bạn!" },
+            { pattern: /^[0-9]+$/, message: "연락처 phải là chữ số!" },
+            { len: 10, message: "연락처 phải đúng 10 chữ số!" },
           ]}
         >
           <Input />
@@ -98,7 +98,7 @@ const ResetPassword: React.FC = () => {
                     sendOTP(phone); // Gọi hàm gửi OTP khi nhấn vào nút "Gửi mã"
                   } else {
                     message.error(
-                      "Vui lòng nhập số điện thoại trước khi gửi OTP!"
+                      "Vui lòng nhập 연락처 trước khi gửi OTP!"
                     );
                   }
                 }}
@@ -149,7 +149,7 @@ const ResetPassword: React.FC = () => {
 
         <Form.Item className="back-to-login">
           <Button type="default" onClick={() => navigate("/login")}>
-            Quay về trang đăng nhập
+            Quay về trang 로그인
           </Button>
         </Form.Item>
 

@@ -431,7 +431,7 @@ const AdminServiceManagement: React.FC = () => {
           <Form.Item
             label="Giá"
             name="price"
-            rules={[{ required: true, message: "Vui lòng nhập giá dịch vụ!" }]}
+            rules={[{ required: true, message: "Vui lòng nhập 요금안내!" }]}
           >
             <InputNumber min={0} style={{ width: "100%" }} />
           </Form.Item>

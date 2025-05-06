@@ -39,7 +39,7 @@ function Footer() {
               <a href="#">Bộ sưu tập</a>
             </li>
             <li>
-              <a href="#">Thương hiệu nổi tiếng</a>
+              <a href="#">브랜드 nổi tiếng</a>
             </li>
           </ul>
         </div>

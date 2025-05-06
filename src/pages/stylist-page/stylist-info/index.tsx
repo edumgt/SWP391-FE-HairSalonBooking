@@ -300,7 +300,7 @@ const StylistInfo: React.FC = () => {
               <Input disabled={!editable} />
             </Form.Item>
 
-            <Form.Item label="Số điện thoại" name="phone">
+            <Form.Item label="연락처" name="phone">
               <Input disabled />
             </Form.Item>
 

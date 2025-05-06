@@ -27,7 +27,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
         message.error("Bạn không có quyền truy cập vào trang này!");
         setHasShownMessage(true);
       }
-      setRedirect("/"); // Chuyển hướng về trang chủ nếu role không phù hợp
+      setRedirect("/"); // Chuyển hướng về 홈 nếu role không phù hợp
     }
   }, [user, isLoading, hasShownMessage, roleRequired]);
 

@@ -130,7 +130,7 @@ const StylistAccountManagement: React.FC = () => {
       width: "25%",
     },
     {
-      title: "Số điện thoại",
+      title: "연락처",
       dataIndex: "phone",
       key: "phone",
       width: "15%",
@@ -242,13 +242,13 @@ const StylistAccountManagement: React.FC = () => {
             <Input />
           </Form.Item>
 
-          {/* Số điện thoại - Chỉ hiển thị khi thêm stylist */}
+          {/* 연락처 - Chỉ hiển thị khi thêm stylist */}
           {!editingAccount && (
             <Form.Item
-              label="Số điện thoại"
+              label="연락처"
               name="phone"
               rules={[
-                { required: true, message: "Vui lòng nhập số điện thoại!" },
+                { required: true, message: "Vui lòng nhập 연락처!" },
               ]}
             >
               <Input />

@@ -39,7 +39,7 @@ const StylistPage: React.FC = () => {
     localStorage.clear();
     setUser(null); // Reset lại trạng thái người dùng
     message.success("Đăng xuất thành công!");
-    navigate("/"); // Điều hướng về trang đăng nhập
+    navigate("/"); // Điều hướng về trang 로그인
   };
 
   const items = [

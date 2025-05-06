@@ -15,10 +15,10 @@ const Home: React.FC = () => {
   const handleBookingClick = () => {
     const token = localStorage.getItem("token"); // Lấy token từ localStorage
     if (token) {
-      navigate("/booking"); // Đã đăng nhập
+      navigate("/booking"); // Đã 로그인
     } else {
-      message.error("Vui lòng đăng nhập để sử dụng dịch vụ!");
-      navigate("/login"); // Chưa đăng nhập
+      message.error("Vui lòng 로그인 để sử dụng dịch vụ!");
+      navigate("/login"); // Chưa 로그인
     }
   };
 

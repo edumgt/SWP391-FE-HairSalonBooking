@@ -125,7 +125,7 @@ const AboutUs: React.FC = () => {
             <h1>HAIR STYLIST LÊ HIẾU</h1>
             <p>
               Hair Stylist Lê Hiếu đóng vai trò là người sáng lập và điều hành
-              tại Kim Hair Salon. Anh Lê Hiếu đã xây dựng thương hiệu bằng năng
+              tại Kim Hair Salon. Anh Lê Hiếu đã xây dựng 브랜드 bằng năng
               lực và tầm nhìn của bản thân, minh chứng từ những hợp tác với các
               đối tác uy tín trong ngành tóc, có thể kể đến: L’Oréal, Kerastase,
               Dyson,... Anh còn là Giám khảo cho các cuộc thi: Idol Hair;

@@ -130,7 +130,7 @@ const StylistSchedule: React.FC = () => {
       });
 
       if (hasConflict) {
-        message.error("Đã đăng ký ngày này rồi.");
+        message.error("Đã 등록 ngày này rồi.");
         return;
       }
 
@@ -140,7 +140,7 @@ const StylistSchedule: React.FC = () => {
         (booking: any) => booking.stylist.id === parseInt(stylistId || "0")
       );
 
-      // Kiểm tra xem có booking nào trùng với khoảng thời gian đăng ký nghỉ không
+      // Kiểm tra xem có booking nào trùng với khoảng thời gian 등록 nghỉ không
       const hasBookingConflict = stylistBookings.some((booking: any) => {
         const bookingStart = moment(
           `${booking.appointmentDate} ${booking.startTime}`,
@@ -171,7 +171,7 @@ const StylistSchedule: React.FC = () => {
 
       if (hasBookingConflict) {
         message.error(
-          "Không thể đăng ký ngày nghỉ do đã có lịch booking trong thời gian này."
+          "Không thể 등록 ngày nghỉ do đã có lịch booking trong thời gian này."
         );
         return;
       }
@@ -188,11 +188,11 @@ const StylistSchedule: React.FC = () => {
       };
 
       await api.post("/schedules", data);
-      message.success("Đăng ký ngày nghỉ thành công!");
+      message.success("등록 ngày nghỉ thành công!");
       setIsLeaveModalVisible(false);
     } catch (error) {
-      console.error("Lỗi khi đăng ký ngày nghỉ:", error);
-      message.error("Lỗi khi đăng ký ngày nghỉ, vui lòng thử lại.");
+      console.error("Lỗi khi 등록 ngày nghỉ:", error);
+      message.error("Lỗi khi 등록 ngày nghỉ, vui lòng thử lại.");
     }
   };
 
@@ -437,7 +437,7 @@ const StylistSchedule: React.FC = () => {
         );
         setPaymentAmount(totalServicePrice); // Cập nhật tổng giá
         console.log("Dịch vụ tương ứng với bookingId:", serviceNamesList);
-        console.log("Tổng giá dịch vụ:", totalServicePrice);
+        console.log("Tổng 요금안내:", totalServicePrice);
       } else {
         console.log("Không tìm thấy dịch vụ với bookingId:", bookingId);
       }
@@ -546,12 +546,12 @@ const StylistSchedule: React.FC = () => {
       />
 
       <Button type="primary" onClick={() => setIsLeaveModalVisible(true)}>
-        Đăng ký ngày nghỉ
+        등록 ngày nghỉ
       </Button>
 
-      {/* Modal đăng ký ngày nghỉ */}
+      {/* Modal 등록 ngày nghỉ */}
       <Modal
-        title="Đăng ký ngày nghỉ"
+        title="등록 ngày nghỉ"
         visible={isLeaveModalVisible}
         onCancel={() => setIsLeaveModalVisible(false)}
         footer={[
@@ -566,7 +566,7 @@ const StylistSchedule: React.FC = () => {
               setIsLeaveModalVisible(false);
             }}
           >
-            Đăng ký
+            등록
           </Button>,
         ]}
       >
@@ -633,10 +633,10 @@ const StylistSchedule: React.FC = () => {
                     : "Không tìm thấy dịch vụ"}
                 </p>
                 <p>
-                  <strong>Tổng giá dịch vụ:</strong>{" "}
+                  <strong>Tổng 요금안내:</strong>{" "}
                   {selectedEvent && serviceNames.length > 0
                     ? paymentAmount.toLocaleString("vi-VN") + " VND"
-                    : "Không có thông tin giá dịch vụ"}
+                    : "Không có thông tin 요금안내"}
                 </p>
 
                 <p>
@@ -757,7 +757,7 @@ const StylistSchedule: React.FC = () => {
                     type="primary"
                     style={{ marginRight: "10px" }}
                     onClick={async () => {
-                      // Tính tổng giá dịch vụ dựa trên selectedEvent
+                      // Tính tổng 요금안내 dựa trên selectedEvent
                       const totalPrice = services
                         .filter((service) =>
                           service.bookings.some(
@@ -769,10 +769,10 @@ const StylistSchedule: React.FC = () => {
                           0
                         );
 
-                      // Kiểm tra nếu số tiền nhập vào lớn hơn 3 lần tổng giá dịch vụ
+                      // Kiểm tra nếu số tiền nhập vào lớn hơn 3 lần tổng 요금안내
                       if (paymentAmount > totalPrice * 3) {
                         message.error(
-                          "Số tiền không được lớn hơn 3 lần giá dịch vụ gốc."
+                          "Số tiền không được lớn hơn 3 lần 요금안내 gốc."
                         );
                         return; // Dừng lại nếu giá quá lớn
                       }

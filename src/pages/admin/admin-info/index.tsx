@@ -35,7 +35,7 @@ const AdminInformation: React.FC = () => {
           },
         });
 
-        // Tìm tài khoản hiện tại dựa trên số điện thoại đã lưu khi đăng nhập
+        // Tìm tài khoản hiện tại dựa trên 연락처 đã lưu khi 로그인
         const currentUser = response.data.find(
           (account) => account.phone === loggedInPhone
         );
@@ -99,7 +99,7 @@ const AdminInformation: React.FC = () => {
         // Cập nhật lại thông tin người dùng sau khi lưu
         setAdmin({
           fullName: values.fullName,
-          phone: admin.phone, // Giữ nguyên số điện thoại
+          phone: admin.phone, // Giữ nguyên 연락처
           email: values.email,
           gender: values.gender,
         });
@@ -174,12 +174,12 @@ const AdminInformation: React.FC = () => {
         </Form.Item>
 
         <Form.Item
-          label="Số điện thoại"
+          label="연락처"
           name="phone"
           rules={[
-            { required: true, message: "Vui lòng nhập số điện thoại của bạn!" },
-            { pattern: /^[0-9]+$/, message: "Số điện thoại phải là chữ số!" },
-            { len: 10, message: "Số điện thoại phải đúng 10 chữ số!" },
+            { required: true, message: "Vui lòng nhập 연락처 của bạn!" },
+            { pattern: /^[0-9]+$/, message: "연락처 phải là chữ số!" },
+            { len: 10, message: "연락처 phải đúng 10 chữ số!" },
           ]}
         >
           <Input value={admin.phone} disabled />

@@ -15,7 +15,7 @@ interface User {
 
 // Định nghĩa kiểu cho UserContext
 interface UserContextType {
-  user: User | null; // Dữ liệu người dùng có thể là null nếu chưa đăng nhập
+  user: User | null; // Dữ liệu người dùng có thể là null nếu chưa 로그인
   setUser: (user: User | null) => void;
   isLoading: boolean; // Trạng thái đang tải thông tin user từ localStorage
 }

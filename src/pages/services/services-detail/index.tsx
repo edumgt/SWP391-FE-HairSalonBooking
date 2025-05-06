@@ -64,7 +64,7 @@ const ServicesDetail = () => {
     if (token) {
       navigate("/booking");
     } else {
-      message.error("Vui lòng đăng nhập để sử dụng dịch vụ!");
+      message.error("Vui lòng 로그인 để sử dụng dịch vụ!");
       navigate("/login");
     }
   };

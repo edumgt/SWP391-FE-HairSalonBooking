@@ -104,7 +104,7 @@ const AdminPersonnelManagement: React.FC = () => {
       key: "email",
     },
     {
-      title: "Số điện thoại",
+      title: "연락처",
       dataIndex: "phone",
       key: "phone",
     },

@@ -46,8 +46,8 @@ const Booking: React.FC = () => {
     const accountId = localStorage.getItem("accountId");
     console.log("AccountId:", accountId);
     if (!accountId) {
-      // Yêu cầu đăng nhập
-      message.error("Vui lòng đăng nhập để sử dụng dịch vụ");
+      // Yêu cầu 로그인
+      message.error("Vui lòng 로그인 để sử dụng dịch vụ");
       return;
     }
 

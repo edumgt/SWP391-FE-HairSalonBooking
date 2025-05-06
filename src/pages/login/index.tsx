@@ -18,21 +18,21 @@ const Login: React.FC = () => {
   }) => {
     try {
       setLoading(true);
-      console.log("Đang đăng nhập với:", values);
+      console.log("Đang 로그인 với:", values);
 
       const response = await api.post("login", {
         username: values.username,
         password: values.password,
       });
 
-      console.log("Kết quả đăng nhập:", response.data);
+      console.log("Kết quả 로그인:", response.data);
 
       if (response.status === 200) {
         const token = response.data.token;
         const fullName = response.data.fullName;
-        const phone = values.username; // Sử dụng số điện thoại (username) để tìm tài khoản
+        const phone = values.username; // Sử dụng 연락처 (username) để tìm tài khoản
 
-        console.log("Token và số điện thoại:", { token, phone });
+        console.log("Token và 연락처:", { token, phone });
 
         // Kiểm tra xem token có được trả về hay không
         if (!token) {
@@ -54,7 +54,7 @@ const Login: React.FC = () => {
 
           console.log("Tất cả tài khoản từ API:", accountResponse.data);
 
-          // Duyệt qua tất cả các tài khoản để tìm tài khoản hiện tại dựa trên số điện thoại
+          // Duyệt qua tất cả các tài khoản để tìm tài khoản hiện tại dựa trên 연락처
           const currentUser = accountResponse.data.find(
             (user: any) => user.phone === phone
           );
@@ -84,12 +84,12 @@ const Login: React.FC = () => {
               // Kiểm tra trạng thái 'deleted'
               if (accountDetails.data.deleted) {
                 message.error(
-                  "Tài khoản của bạn đã bị cấm và không thể đăng nhập."
+                  "Tài khoản của bạn đã bị cấm và không thể 로그인."
                 );
-                return; // Ngừng tiến trình đăng nhập nếu tài khoản bị cấm
+                return; // Ngừng tiến trình 로그인 nếu tài khoản bị cấm
               }
 
-              message.success("Đăng nhập thành công!");
+              message.success("로그인 thành công!");
 
               // Kiểm tra "customers" có trống hay không
               if (accountDetails.data.customers.length === 0) {
@@ -132,7 +132,7 @@ const Login: React.FC = () => {
                 }
               }
 
-              console.log("Điều hướng đến trang chủ");
+              console.log("Điều hướng đến 홈");
               navigate("/");
             }
 
@@ -181,13 +181,13 @@ const Login: React.FC = () => {
                   message.error("Có lỗi khi tạo stylist.");
                 }
               }
-              message.success("Đăng nhập thành công!");
+              message.success("로그인 thành công!");
               navigate("/stylistpage/stylistInfo");
             } else if (currentUser.role === "MANAGER") {
-              message.success("Đăng nhập thành công!");
+              message.success("로그인 thành công!");
               navigate("/adminpage/adminInfo");
             } else {
-              console.log("Điều hướng đến trang chủ");
+              console.log("Điều hướng đến 홈");
               navigate("/");
             }
           } else {
@@ -198,7 +198,7 @@ const Login: React.FC = () => {
           message.error("Đã xảy ra lỗi khi lấy thông tin tài khoản!");
         }
       } else {
-        message.error("Đăng nhập thất bại, vui lòng kiểm tra lại thông tin!");
+        message.error("로그인 thất bại, vui lòng kiểm tra lại thông tin!");
       }
     } catch (error: any) {
       if (error.response && error.response.status === 400) {
@@ -235,7 +235,7 @@ const Login: React.FC = () => {
       ) : (
         <div className="authen-template">
           <div className="authen-template__form">
-            <h1 className="title">Đăng nhập</h1>
+            <h1 className="title">로그인</h1>
             <Form
               form={form}
               labelCol={{ span: 24 }}
@@ -243,10 +243,10 @@ const Login: React.FC = () => {
               onFinish={onFinish}
             >
               <Form.Item
-                label="Số điện thoại"
+                label="연락처"
                 name="username"
                 rules={[
-                  { required: true, message: "Vui lòng nhập số điện thoại!" },
+                  { required: true, message: "Vui lòng nhập 연락처!" },
                 ]}
               >
                 <Input />
@@ -265,13 +265,13 @@ const Login: React.FC = () => {
                   className="login-button"
                   htmlType="submit"
                 >
-                  Đăng nhập
+                  로그인
                 </Button>
               </Form.Item>
 
               <Form.Item className="register-link">
                 <span onClick={() => navigate("/register")}>
-                  Chưa có tài khoản? Đăng ký tại đây
+                  Chưa có tài khoản? 등록 tại đây
                 </span>
               </Form.Item>
 
